@@ -62,7 +62,8 @@ const NavBar = () => {
                 className="flex items-center gap-2"
               >
                 <LayoutDashboard className="h-4 w-4" />
-                Dashboard
+                <span className="hidden md:inline">Dashboard</span>
+                
               </Button>
               <Button
                 onClick={handleLogout}
@@ -70,7 +71,8 @@ const NavBar = () => {
                 className="flex items-center gap-2"
               >
                 <LogOut className="h-4 w-4" />
-                Logout
+                <span className="hidden md:inline">Logout</span>
+                
               </Button>
             </>
           ) : (
@@ -80,7 +82,8 @@ const NavBar = () => {
               className="flex items-center gap-2"
             >
               <LogIn className="h-4 w-4" />
-              Login
+              <span className="hidden md:inline">Login</span>
+              
             </Button>
           )}
         </div>
