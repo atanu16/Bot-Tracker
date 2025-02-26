@@ -19,6 +19,7 @@ const Index = () => {
       setCurrentTime(new Date());
     }, 1000);
 
+    
     // Cleanup interval on component unmount
     return () => clearInterval(timer);
   }, []);
