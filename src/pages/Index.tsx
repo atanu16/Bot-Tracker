@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Timeline from "@/components/Timeline";
 import { useToast } from "@/components/ui/use-toast";
@@ -33,11 +32,11 @@ const Index = () => {
             {currentTime.toLocaleTimeString()}
           </h1>
           <p className="text-2xl text-slate-600 mb-4">
-            {currentTime.toLocaleDateString('en-US', { 
-              weekday: 'long', 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+            {currentTime.toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
             })}
           </p>
         </div>
