@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +7,8 @@ import BotManagement from "@/components/dashboard/BotManagement";
 import { BotDetails } from "@/types/dashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { LogOut } from "lucide-react";
+import { LogOut, Bot } from "lucide-react";
+
 
 const MemberDashboard = () => {
   const [bots, setBots] = useState<BotDetails[]>([]);
@@ -81,8 +83,9 @@ const MemberDashboard = () => {
       <nav className="glass fixed top-0 w-full z-50">
         <div className="container mx-auto px-6 py-3">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold">
-              Bot Timeline Tracker
+            <h1 className="text-xl font-semibold flex items-center gap-2">
+            <Bot className="h-6 w-6 md:hidden" />
+            <span className="hidden md:inline">Bot Control Room</span>
             </h1>
             <div className="flex items-center gap-3">
               <Button 

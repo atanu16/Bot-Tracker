@@ -10,7 +10,7 @@ const Index = () => {
 
   useEffect(() => {
     toast({
-      title: "Welcome to Bot Timeline Tracker",
+      title: "Welcome to Bot Tracker",
       description: "View live bot activities and their schedules.",
       duration: 3000,
     });

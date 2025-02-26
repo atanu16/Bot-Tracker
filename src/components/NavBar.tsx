@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { LogIn, LogOut, LayoutDashboard, Bot } from "lucide-react";
@@ -13,7 +12,9 @@ const NavBar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
       setIsAuthenticated(!!session);
     });
 
@@ -36,7 +37,7 @@ const NavBar = () => {
       });
       navigate("/");
     } catch (error) {
-      console.error('Logout error:', error);
+      console.error("Logout error:", error);
       toast({
         title: "Logout failed",
         description: "Failed to log out. Please try again.",
@@ -50,7 +51,7 @@ const NavBar = () => {
       <div className="container mx-auto flex justify-between items-center px-6 py-3">
         <Link to="/" className="text-xl font-semibold flex items-center gap-2">
           <Bot className="h-6 w-6 md:hidden" />
-          <span>Bot Control Room</span>
+          <span className="hidden md:inline">Bot Control Room</span>
         </Link>
         <div className="flex gap-2">
           {isAuthenticated ? (

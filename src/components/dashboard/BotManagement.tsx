@@ -61,8 +61,9 @@ const BotManagement = ({ bots, setBots }: BotManagementProps) => {
             onClick={() => setIsAddingBot(true)}
             className="bg-slate-800 hover:bg-slate-900 text-white transition-all duration-300"
           >
-            <Plus className="mr-2" />
-            Add New Bot
+            <Plus className="mr-2"/>
+          <span className="hidden md:inline">Add New Bot</span>
+            
           </Button>
         )}
       </div>
