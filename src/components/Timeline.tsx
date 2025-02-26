@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 
 import { useEffect, useState } from "react";
 import { Bot, Clock, Monitor, Calendar, ChevronRight } from "lucide-react";
