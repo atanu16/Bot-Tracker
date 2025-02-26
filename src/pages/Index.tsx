@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import NavBar from "@/components/NavBar";
 import Timeline from "@/components/Timeline";
 import { useToast } from "@/components/ui/use-toast";
